@@ -10,7 +10,9 @@
         android:title="Favoritos"
         android:icon="@drawable/icon_favorites"/>
 
-    <item android:title="Publicacion"
+    <item
+        android:id="@+id/fragPublication"
+        android:title="Publicacion"
         android:icon="@drawable/icon_publication"
         />
 </menu>
