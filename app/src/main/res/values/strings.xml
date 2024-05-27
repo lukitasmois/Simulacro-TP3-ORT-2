@@ -2,4 +2,8 @@
     <string name="app_name">Simulacro-TP3-ORT-2</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_started">Get Started</string>
+    <string name="adopcion_de_perritos">Adopción de Perritos</string>
+    <string name="welcome_quote">Make your life more happy with us to have a little new friends</string>
+    <string name="dog_image_desc">dog image</string>
 </resources>
