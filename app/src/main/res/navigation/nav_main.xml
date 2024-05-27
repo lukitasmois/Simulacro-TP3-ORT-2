@@ -2,4 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_main" />
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragProfile">
+    <fragment
+        android:id="@+id/fragProfile"
+        android:name="com.example.simulacro_tp3_ort_2.ui.views.fragments.FragProfile"
+        android:label="lay_frag_profile"
+        tools:layout="@layout/lay_frag_profile" />
+    <fragment
+        android:id="@+id/fragConfig"
+        android:name="com.example.simulacro_tp3_ort_2.ui.views.fragments.FragConfig"
+        android:label="lay_frag_config"
+        tools:layout="@layout/lay_frag_config" />
+</navigation>
