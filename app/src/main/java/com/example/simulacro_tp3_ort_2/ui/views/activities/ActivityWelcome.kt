@@ -1,5 +1,6 @@
 package com.example.simulacro_tp3_ort_2.ui.views.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -21,7 +22,10 @@ class ActivityWelcome : AppCompatActivity() {
         binding = LayActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.layWelcomeButton.setOnClickListener { welcomeViewModel.buttonClick() }
+        binding.layWelcomeButton.setOnClickListener {
+            val activityHome: Intent = Intent(applicationContext, ActivityHome::class.java)
+            startActivity(activityHome)
+        }
 
 
 
