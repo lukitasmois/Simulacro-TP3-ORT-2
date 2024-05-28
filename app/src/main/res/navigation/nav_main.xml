@@ -9,4 +9,15 @@
         android:name="com.example.simulacro_tp3_ort_2.ui.views.fragments.FragHome"
         android:label="lay_frag_home"
         tools:layout="@layout/lay_frag_home" />
+
+    <fragment
+        android:id="@+id/fragFavorites"
+        android:name="com.example.simulacro_tp3_ort_2.ui.views.fragments.FragFavorites"
+        android:label="lay_frag_favorites"
+        tools:layout="@layout/lay_frag_favorites" />
+    <fragment
+        android:id="@+id/fragPublication"
+        android:name="com.example.simulacro_tp3_ort_2.ui.views.fragments.FragPublication"
+        android:label="lay_frag_publication"
+        tools:layout="@layout/lay_frag_publication" />
 </navigation>

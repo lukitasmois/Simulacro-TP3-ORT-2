@@ -8,12 +8,23 @@
     tools:context=".ui.views.activities.ActivityHome">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView3"
-        android:name="com.example.simulacro_tp3_ort_2.ui.views.fragments.FragHome"
-        android:layout_width="wrap_content"
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_main" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/activity_home_bottomBar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:menu="@menu/menu_bottom_bar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
