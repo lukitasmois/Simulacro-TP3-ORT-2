@@ -1,5 +1,6 @@
 package com.example.simulacro_tp3_ort_2.ui.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -23,6 +24,7 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             isLoading.postValue(true)
             val result = getDogsUseCase()
+
 
             if(!result.isNullOrEmpty()){
                 dogModel.postValue(result[0])
