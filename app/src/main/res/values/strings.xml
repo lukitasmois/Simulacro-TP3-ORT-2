@@ -6,4 +6,7 @@
     <string name="adopcion_de_perritos">Adopción de Perritos</string>
     <string name="welcome_quote">Make your life more happy with us to have a little new friends</string>
     <string name="dog_image_desc">dog image</string>
+
+    <string name="manu_hamburger_configuracion">Configuracion</string>
+    <string name="menu_hamburger_profileText">Perfil</string>
 </resources>

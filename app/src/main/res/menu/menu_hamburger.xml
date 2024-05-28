@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragProfile"
+        android:title="@string/menu_hamburger_profileText" />
+    <item
+        android:id="@+id/fragConfig"
+        android:title="@string/manu_hamburger_configuracion" />
+</menu>
