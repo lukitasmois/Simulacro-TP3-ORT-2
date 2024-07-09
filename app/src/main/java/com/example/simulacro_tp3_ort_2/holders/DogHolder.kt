@@ -1,6 +1,7 @@
 package com.example.simulacro_tp3_ort_2.holders
 
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -33,5 +34,8 @@ class DogHolder( v : View): RecyclerView.ViewHolder(v) {
         val itemSubBreed = view.findViewById<TextView>(R.id.card_dog_subBreed)
         itemSubBreed.text = subBreed
     }
+
+    fun saveDog() = view.findViewById<ImageButton>(R.id.card_dog_saveButton)
+
 
 }

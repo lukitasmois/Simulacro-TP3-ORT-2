@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.simulacro_tp3_ort_2.data.database.entities.DogEntity
+import com.example.simulacro_tp3_ort_2.data.model.Dog
 
 @Dao
 interface DogDao {
@@ -17,4 +18,7 @@ interface DogDao {
 
     @Query("DELETE FROM dog_table")
     suspend fun deleteAllDogs()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertDog(dogEntity: DogEntity)
 }

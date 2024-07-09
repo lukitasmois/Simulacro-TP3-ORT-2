@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.simulacro_tp3_ort_2.R
-import com.example.simulacro_tp3_ort_2.data.model.Dog
-import com.example.simulacro_tp3_ort_2.data.model.DogWithText
+import com.example.simulacro_tp3_ort_2.domain.model.DogWithText
 import com.example.simulacro_tp3_ort_2.holders.DogHolder
+import com.example.simulacro_tp3_ort_2.listeners.ItemClickListener
 
 class DogAdapter(
-    var dogList: MutableList<DogWithText>
+    var dogList: MutableList<DogWithText>,
+    val saveClick : ItemClickListener
 ) : RecyclerView.Adapter<DogHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DogHolder {
@@ -23,6 +24,10 @@ class DogAdapter(
         holder.setName(dog.name)
         holder.setBreed(dog.breed)
         holder.setSubBreed(dog.subBreed)
+        holder.saveDog().setImageResource(if(dog.favorite) R.drawable.icon_saved else R.drawable.no_saved)
+        holder.saveDog().setOnClickListener {
+            saveClick.saveDog(dog)
+        }
     }
 
     override fun getItemCount() = dogList.size
@@ -31,5 +36,4 @@ class DogAdapter(
         dogList = newList.toMutableList()
         notifyDataSetChanged()
     }
-
 }

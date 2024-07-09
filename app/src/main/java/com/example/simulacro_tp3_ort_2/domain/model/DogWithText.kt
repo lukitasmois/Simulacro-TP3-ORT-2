@@ -1,4 +1,4 @@
-package com.example.simulacro_tp3_ort_2.data.model
+package com.example.simulacro_tp3_ort_2.domain.model
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -7,7 +7,8 @@ data class DogWithText (
     val name: String,
     val image: String?,
     val breed : String?,
-    val subBreed : String?
+    val subBreed : String?,
+    var favorite : Boolean = false
 ) : Parcelable {
     constructor(name: String, breed: String, subBreed: String) : this(name, null, null, null)
 
@@ -15,7 +16,8 @@ data class DogWithText (
         parcel.readString()!!,
         parcel.readString(),
         parcel.readString()!!,
-        parcel.readString()!!
+        parcel.readString()!!,
+
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

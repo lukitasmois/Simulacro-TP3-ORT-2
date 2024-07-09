@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface DogsApiClient {
 
-    @GET("api/breeds/image/random/2")
+    @GET("api/breeds/image/random/3")
     suspend fun getDog() : Response<ApiRespone>
 }

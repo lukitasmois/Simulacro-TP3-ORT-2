@@ -6,7 +6,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-class DogService @Inject constructor( private val service: DogsApiClient) {
+class DogService @Inject constructor(
+    private val service: DogsApiClient) {
 
     suspend fun getDog(): List<DogModel> {
         return withContext(Dispatchers.IO) {

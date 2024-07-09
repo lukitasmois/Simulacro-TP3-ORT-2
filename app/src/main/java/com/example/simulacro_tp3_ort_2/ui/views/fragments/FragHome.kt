@@ -9,11 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.simulacro_tp3_ort_2.R
 import com.example.simulacro_tp3_ort_2.adapters.DogAdapter
-import com.example.simulacro_tp3_ort_2.data.model.DogWithText
 import com.example.simulacro_tp3_ort_2.databinding.LayFragHomeBinding
 import com.example.simulacro_tp3_ort_2.ui.viewmodels.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,7 +36,7 @@ class FragHome : Fragment() {
         _binding = LayFragHomeBinding.inflate(inflater, container, false)
         val searcher = _binding?.searcher
 
-        dogAdapter = DogAdapter(mutableListOf())
+        dogAdapter = DogAdapter(mutableListOf(), homeViewModel)
 
         homeViewModel.onCreate()
 
@@ -73,6 +70,8 @@ class FragHome : Fragment() {
         homeViewModel.isLoading.observe(viewLifecycleOwner) {
             binding.loading.isVisible = it
         }
+
+
 
 
             return binding.root
